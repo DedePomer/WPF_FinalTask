@@ -1,0 +1,26 @@
+﻿<Window x:Class="WPF_FinalTask.FolderWindow.SubClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_FinalTask.FolderWindow"
+        mc:Ignorable="d"
+        Title="SubClientWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <GroupBox Header="Название услуги">
+                <TextBlock x:Name="TBLOCKTitle"></TextBlock>
+            </GroupBox>
+            <TextBlock x:Name="TBLOCKDuration"></TextBlock>
+            <ComboBox x:Name="CBClients"></ComboBox>
+            <GroupBox Header="Выбирите дату">
+                <DatePicker Name="DPdate"/>
+            </GroupBox>
+            <GroupBox Header="Ввдеите время">
+                <TextBox x:Name="TBOXStartTime" BorderThickness="3" TextChanged="TBOXStartTime_TextChanged"></TextBox>
+            </GroupBox>
+            <TextBlock x:Name="TBLOCKTimeEnd"></TextBlock>
+            <Button x:Name="Bsave" Click="Bsave_Click">Добавить запись</Button>
+        </StackPanel>
+    </Grid>
+</Window>

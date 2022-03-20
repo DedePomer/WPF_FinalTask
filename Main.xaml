@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF_FinalTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_FinalTask"
+        mc:Ignorable="d"
+        Title="Школа языков Леарн" Height="500" Width="800"
+        Icon="Res\school_logo.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="Res\school_logo.png"/>
+            <TextBlock  Text="Школа языков Леарн" FontSize="30" Margin="20,0,0,0"  VerticalAlignment="Center" FontStyle="Italic"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal"  HorizontalAlignment="Center">
+            <TextBox Width="100" Height="20" Name="TBOXAuto"></TextBox>
+            <Button Click="ButtonClick" Margin="20,0,0,0" Content="Поменять пользователя" Height="20"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
+            <Button   Name="BBliz" Visibility="Collapsed" Click="BBliz_Click">Ближайшие записи</Button>
+            <Frame Name="Fmain"   NavigationUIVisibility="Hidden"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
